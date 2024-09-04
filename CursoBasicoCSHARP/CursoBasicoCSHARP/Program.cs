@@ -85,9 +85,22 @@ namespace CursoBasicoCSHARP
 
             Console.Write("Digite Seu Nome:");
             string r1 = Console.ReadLine();
-            Console.WriteLine($"Seu Nome é {r1}.");
+            Console.WriteLine($"Seu Nome é {r1} e possui {ContarLetras(r1)} letras");
+
+            MostrarDados();
         }
 
+        public static void MostrarDados() {
+            Console.WriteLine("Estes São os Dados");
+            Console.WriteLine("Rua Mariano Procopio");
+            Console.WriteLine("Bairro: São Judas Tadeu");
+            Console.WriteLine("38090-080");
+            Console.WriteLine("Ao Lado de Uma Padaria");
+        }
 
+        public static int ContarLetras (string palavra)
+        {
+            return palavra.Length;
+        }
     }
 }
