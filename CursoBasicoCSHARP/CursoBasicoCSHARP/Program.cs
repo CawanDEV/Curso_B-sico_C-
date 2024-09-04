@@ -82,7 +82,12 @@ namespace CursoBasicoCSHARP
                 Console.WriteLine($"Iteração {i}");
                
             } while (i > 0);
+
+            Console.Write("Digite Seu Nome:");
+            string r1 = Console.ReadLine();
+            Console.WriteLine($"Seu Nome é {r1}.");
         }
+
 
     }
 }
