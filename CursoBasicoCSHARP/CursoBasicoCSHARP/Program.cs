@@ -6,7 +6,12 @@ namespace CursoBasicoCSHARP
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int n1 = 5;
+            double n2 = 3.4;
+            string s1 = "Cawan Davi";
+            char c1 = '@';
+            Console.WriteLine($"{n1}, {n2}, {s1}, {c1}");
+
         }
     }
 }
