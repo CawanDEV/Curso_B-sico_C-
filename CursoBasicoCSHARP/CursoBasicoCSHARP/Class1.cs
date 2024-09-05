@@ -12,29 +12,25 @@ namespace CursoBasicoCSHARP
         {
             Console.WriteLine("Classes, Objetos e Escopos de Visibilidade");
 
-            Product p1 = new Product();
-            p1.Nome = "Banana";
-            p1.Preco = 3.9;
-            p1.Comprar(20);
-            p1.Vender(13);
-            Console.WriteLine(p1.ObterTexto());
+            Product p1 = new Product("Maça", 6.2);
+            Product p2 = new Product("Banana", 2.5);
+            Product p3 = new Product("Laranja", 3.9);
+            Product p4 = new Product("Pêra", 5.75);
+            Product p5 = new Product("Abacaxi", 3.33);
+            Product p6 = new Product
 
+            List<Product> produtos = new List<Product>();
+            produtos.Add(p1);
+            produtos.Add(p2);
+            produtos.Add(p3);
+            produtos.Add(p4);
+            produtos.Add(p5);
 
-            Product p2 = new Product();
-            p2.Nome = "Maca";
-            p2.Preco = 2.99;
-            p2.Comprar(100);
-            p2.Vender(29);
-            Console.WriteLine(p2.ObterTexto());
-
-
-
-            Product p3 = new Product("Laranaja", 4.99);
-            p3.Comprar(120);
-            p3.Vender(98);
-            Console.WriteLine(p3.ObterTexto());
-            
-
+            foreach (Product p in produtos)
+            {
+                p.Comprar(100);
+                Console.WriteLine(p.ObterTexto());
+            }
         }
     }
 }
