@@ -22,7 +22,8 @@ namespace CursoBasicoCSHARP
                 Console.WriteLine("1 - Cadastrar Um Produto");
                 Console.WriteLine("2 - Listar Produtos");
                 Console.WriteLine("3 - Excluir Produto");
-                Console.WriteLine("4 - Adicionar Quantidade a um Produto");
+                Console.WriteLine("4 - Compra de Produtos");
+                Console.WriteLine("5 - Venda de Produtos");
                 Console.WriteLine("S - Sair");
 
                 Console.WriteLine("Opção Desejada");
@@ -91,14 +92,25 @@ namespace CursoBasicoCSHARP
                         Console.Clear();
                         if (produtos.Count >0)
                         {
-                            Console.WriteLine("Digite o Produto que Deseja Adicionar Estoque");
-                            string estoque = Console.ReadLine();
-                            produtos.Add    
+                            Console.WriteLine("Digite O Produto Que Deseja Adicionar O Estoque");
+                            for (int i = 0; i < produtos.Count; i++)
+                            {
+                                Console.WriteLine($"{i + 1}. {produtos[i].ObterTexto()}");
+                            }
+
+                            string input = Console.ReadLine();
+                            int indice;
+                            if (int.TryParse(input, out indice) && indice > 0 && indice <= produtos.Count)
+                            {
+                                int 
+                                Console.WriteLine("Adição de Estoque");
+                            }
                         }
                         else
                         {
-                            Console.WriteLine("Não Itens na Lista Para Adicionar Esroque");
+                            Console.WriteLine("Não Itens na Lista Para Adicionar Estoque");
                         }
+                        Console.ReadKey();
                         break;
 
                     case "S":
