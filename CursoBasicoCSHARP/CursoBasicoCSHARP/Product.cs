@@ -27,7 +27,7 @@ namespace CursoBasicoCSHARP
 
         public double Preco { get; set; }
 
-        public int Estoque { get; private set; }
+        public int Estoque { get; set; }
 
         public Product()
         {
@@ -59,8 +59,6 @@ namespace CursoBasicoCSHARP
             sb.Append($"Preço: R${this.Preco}\n");
             sb.Append($"Estoque: {this.Estoque}\n");
             return sb.ToString();
-
-
         }
     }
 }

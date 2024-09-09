@@ -95,15 +95,17 @@ namespace CursoBasicoCSHARP
                             Console.WriteLine("Digite O Produto Que Deseja Adicionar O Estoque");
                             for (int i = 0; i < produtos.Count; i++)
                             {
-                                Console.WriteLine($"{i + 1}. {produtos[i].ObterTexto()}");
+                                Console.WriteLine($"{i}. {produtos[i].ObterTexto()}");
                             }
 
                             string input = Console.ReadLine();
                             int indice;
-                            if (int.TryParse(input, out indice) && indice > 0 && indice <= produtos.Count)
+                            if (int.TryParse(input, out indice) && indice <= produtos.Count)
                             {
-                                int 
-                                Console.WriteLine("Adição de Estoque");
+                                Console.WriteLine("Adição de Estoque");                                          
+                                Console.WriteLine("Quantidade de Produto Que Deseja Comprar");
+                                int estoque = Int32.Parse(Console.ReadLine());
+                                produtos[indice].Estoque = estoque;
                             }
                         }
                         else
