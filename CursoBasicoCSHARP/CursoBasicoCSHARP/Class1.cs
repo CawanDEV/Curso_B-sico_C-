@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace CursoBasicoCSHARP
 {
@@ -61,26 +62,45 @@ namespace CursoBasicoCSHARP
                         Console.Clear();
                         if (produtos.Count > 0)
                         {
-                            Console.Write("\nDigite o Nome do Produto a Ser Excluído: ");
-                            string nomeProduto = Console.ReadLine();
-                            Product produtoParaExcluir = produtos.FirstOrDefault(p => p.Nome == nomeProduto);
-
-                            if (produtoParaExcluir != null)
+                            Console.WriteLine("Lista de Produtos:");
+                            for (int i = 0; i < produtos.Count; i++)
                             {
-                                produtos.Remove(produtoParaExcluir);
-                                Console.WriteLine("Produto Excluído Com Sucesso!");
+                                Console.WriteLine($"{i + 1}. {produtos[i].ObterTexto()}");
+                            }
+                            Console.Write("\nDigite o número do produto que deseja excluir: ");
+                            string input = Console.ReadLine();
+                            int indice;
+                            if (int.TryParse(input, out indice) && indice > 0 && indice <= produtos.Count)
+                            {
+                                Product produtoParaExcluir = produtos[indice - 1];
+                                produtos.RemoveAt(indice - 1);
+                                Console.WriteLine($"\nProduto '{produtoParaExcluir.Nome}' excluído com sucesso!");
                             }
                             else
                             {
-                                Console.WriteLine("Produto não encontrado.");
+                                Console.WriteLine("Entrada inválida. Nenhum produto foi excluído.");
                             }
                         }
                         else
                         {
-                            Console.WriteLine("Não há itens na lista");
+                            Console.WriteLine("Não há itens na lista.");
                         }
                         Console.ReadKey();
                         break;
+                    case "4":
+                        Console.Clear();
+                        if (produtos.Count >0)
+                        {
+                            Console.WriteLine("Digite o Produto que Deseja Adicionar Estoque");
+                            string estoque = Console.ReadLine();
+                            produtos.Add    
+                        }
+                        else
+                        {
+                            Console.WriteLine("Não Itens na Lista Para Adicionar Esroque");
+                        }
+                        break;
+
                     case "S":
                         Console.WriteLine("Obrigado Por Usar o Programa");
                         Console.ReadKey();

@@ -56,7 +56,7 @@ namespace CursoBasicoCSHARP
         {
             StringBuilder sb = new StringBuilder();
             sb.Append($"\nNome: {this.Nome}\n");
-            sb.Append($"Preço: {this.Preco}\n");
+            sb.Append($"Preço: R${this.Preco}\n");
             sb.Append($"Estoque: {this.Estoque}\n");
             return sb.ToString();
 
