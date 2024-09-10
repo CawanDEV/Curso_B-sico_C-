@@ -6,19 +6,23 @@ using System.Threading.Tasks;
 
 namespace Curso_Básico_CSHARP_M2
 {
-    internal class Carro
+    internal class Carro : Veiculo
     {
-        public int Portas {  get; set; }
+        public int Portas { get; set; }
 
         public double Preco { get; set; }
 
         public string Modelo { get; set; }
 
-        public Carro() 
+        public Carro()
         {
             Console.WriteLine("Um Novo Objeto Carro Foi Criado.");
         }
 
+        public Carro (int pesoKg) : base(pesoKg)
+        {
+            Console.WriteLine($"Um novo objeto do tipo carro com peso {pesoKg} foi criado");
+        }
         public Carro(string modelo) : this() 
         {
             this.Modelo = modelo;
@@ -30,6 +34,9 @@ namespace Curso_Básico_CSHARP_M2
             this.Preco = preco;
         }
 
-
+        ~Carro()
+        {
+            Console.WriteLine("Um Objeto do tipo carro foi destruido.");
+        }
     }
 }
