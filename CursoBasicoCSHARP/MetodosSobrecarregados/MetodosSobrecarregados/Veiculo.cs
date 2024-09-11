@@ -26,6 +26,7 @@ namespace MetodosSobrecarregados
 
         public Veiculo(string modelo)
         {
+            this.Velocidade = 0;
             this.Modelo = modelo;
         }
         public Veiculo(string modelo, CorVeiculo cor) : this(modelo)
@@ -56,6 +57,8 @@ namespace MetodosSobrecarregados
             {
                 this.Velocidade += acrescimoPorSegundo;
                 Thread.Sleep(1000);
+                Console.WriteLine($"Velocidade atual: {this.Velocidade:f2}");
+                inicio = inicio.AddSeconds(1);
             }
         }
     }

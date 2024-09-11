@@ -11,6 +11,7 @@ namespace MetodosSobrecarregados
             v1.MostrarDados(1);
             Veiculo v2 = new Veiculo("Opala", CorVeiculo.Preto, 4);
             v2.MostrarDados(2);
+            v2.Acelerar(5, 10);
             
         }
     }
