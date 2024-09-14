@@ -35,7 +35,7 @@ namespace HerançaDeClasses
         {
             while (this.Altitude > 0)
             {
-                Console.WriteLine($"Nosso aviao esta a {this.Altitude:f2} metros de altitude");
+                Console.WriteLine($"Nosso aviao esta a {this.Altitude:f2} metros de altitude.");
                 this.Altitude -= 60;
                 this.Altitude = this.Altitude < 0 ? 0 : this.Altitude;
                 Thread.Sleep(1000);
