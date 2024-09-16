@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MembrosClassesAbstratas
 {
-    internal class Aviao : Veiculo
+    internal sealed class Aviao : Veiculo
     {
         public Aviao(double peso) : base(peso)
         {
