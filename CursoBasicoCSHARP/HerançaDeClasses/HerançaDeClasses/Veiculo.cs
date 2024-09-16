@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace HerançaDeClasses
 {
-    internal class Veiculo
+    class Veiculo
     {
         public double Peso { get; set; }
         public double Altura { get; set; }
@@ -24,7 +24,7 @@ namespace HerançaDeClasses
             this.Largura = largura;
             this.Comprimento = comprimento;
             Console.WriteLine("Um objeto do tipo veiculo foi criado");
-        }
+        }  
         ~Veiculo()
         {
             Console.WriteLine("Um objeto do tipo veiculo foi destruido");
