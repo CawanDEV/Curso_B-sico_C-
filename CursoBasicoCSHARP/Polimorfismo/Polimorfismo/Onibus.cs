@@ -17,13 +17,13 @@ namespace Polimorfismo
             }
             set
             {
-                if ((value >= 18) && (value <= 32))
+                if ((value >= 18) && (value <= 60))
                 {
                     capacidade = value;
                 }
                 else
                 {
-                    throw new ArgumentException("O Carro pode ter capacidade de 18 a 32 pessoas");
+                    throw new ArgumentException("O Onibus pode ter capacidade de 18 a 60 pessoas");
                 }
             }
         }
@@ -45,11 +45,11 @@ namespace Polimorfismo
                 Console.WriteLine("Não ha combustivel para percorrer a distancia informada");
             }
         }
-        public new void Frear()
+        public override void Frear()
         {
-            Console.WriteLine("Acionando os Freios ABS... Parou");
+            Console.WriteLine("Acionando os Freios a AR... Parou");
         }
-        public Onibus(int pesoKg, DateTime dataFabricacao, int capacidade = 5) : base(pesoKg, dataFabricacao)
+        public Onibus(int pesoKg, DateTime dataFabricacao, int capacidade = 45) : base(pesoKg, dataFabricacao)
         {
             Capacidade = capacidade;
         }
