@@ -11,6 +11,7 @@ namespace Polimorfismo
         public int PesoKg { get; set; }
         public DateTime DataFabricacao { get; set; }
         public double QuantidadeCombustivel { get; set; }
+        public string Tipo {  get { return this.GetType().Name; } }
         public abstract int Capacidade {  get; set; }
         public abstract void Abastecer(double quantidadeLitros);
         public abstract void Mover(double distanciKm);
