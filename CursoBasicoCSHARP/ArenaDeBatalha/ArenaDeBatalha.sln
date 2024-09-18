@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArenaDeBatalha.GUI", "ArenaDeBatalha.GUI\ArenaDeBatalha.GUI.csproj", "{40B1CAB4-571A-4D7D-8577-8A241D7D8564}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArenaDeBatalha.GameLogic", "ArenaDeBatalha.GameLogic\ArenaDeBatalha.GameLogic.csproj", "{4349636A-FDFD-44B9-BEE1-C388AD914452}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{40B1CAB4-571A-4D7D-8577-8A241D7D8564}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40B1CAB4-571A-4D7D-8577-8A241D7D8564}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40B1CAB4-571A-4D7D-8577-8A241D7D8564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4349636A-FDFD-44B9-BEE1-C388AD914452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4349636A-FDFD-44B9-BEE1-C388AD914452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4349636A-FDFD-44B9-BEE1-C388AD914452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4349636A-FDFD-44B9-BEE1-C388AD914452}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
